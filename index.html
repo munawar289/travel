@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Labuan Bajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .background-slider {
+            position: relative;
+            height: 120vh;
+            overflow: hidden;
+        }
+        .background-slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .background-slider img.active {
+            opacity: 1;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1s ease-out forwards;
+        }
+
+        /* Adding animation for the footer */
+        @keyframes hover-slide {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+
+        footer {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+
+        footer .text-[#FF4081] {
+            color: #FF4081;
+        }
+
+        footer .border-[#FF4081] {
+            border-color: #FF4081;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+<!-- Header -->
+<header class="fixed w-full h-auto z-50 text-white">
+    <div id="header" class="w-full p-10 flex justify-between items-center">
+        <div id="logo" class="absolute transform -translate-y-14 text-2xl font-bold">LABUAN BAJO</div>
+        <nav id="navigation" class="absolute left-1/2 transform -translate-x-1/2 translate-y-[32em] bg-white rounded-lg py-1 px-3">
+            <a href="#home" class="relative inline-block py-2 px-4 hover:bg-[#F2D2BD] rounded-md transition-opacity duration-300 text-[#155E95] font-semibold transition">
+                <span class="relative z-10">Home</span>
+            </a>
+            <a href="#destinations" class="relative inline-block py-2 px-4 hover:bg-[#F2D2BD] rounded-md transition-opacity duration-300 text-[#155E95] font-semibold transition">
+                <span class="relative z-10">Destinations</span>
+            </a>
+            <a href="#packages" class="relative inline-block py-2 px-4 hover:bg-[#F2D2BD] rounded-md transition-opacity duration-300 text-[#155E95] font-semibold transition">
+                <span class="relative z-10">Packages</span>
+            </a>
+            <a href="#contact" class="relative inline-block py-2 px-4 hover:bg-[#F2D2BD] rounded-md transition-opacity duration-300 text-[#155E95] font-semibold transition">
+                <span class="relative z-10">Contact</span>
+            </a>
+        </nav>
+        <div id="language-dropdown" class="absolute right-10">
+            <select class="py-2 px-2 rounded-lg bg-transparent">
+                <option class="text-black" value="en">EN</option>
+                <option class="text-black" value="id">ID</option>
+                <option class="text-black" value="es">ES</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="background-slider relative">
+    <img src="bg.jpg" alt="Ocean" class="active">
+    <img src="bg2.jpg" alt="Island">
+    <img src="bg3.jpg" alt="Sunset">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center text-white px-6">
+        <div class="flex flex-col">
+            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 text-3xl font-bold">LABUAN BAJO</div>
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the Beauty of Labuan Bajo</h1>
+                <p class="text-lg md:text-xl mb-6">A paradise waiting for you to discover</p>
+            </div>
+        </div>
+    </div>
+    <div class="absolute -bottom-5 bg-gradient-to-b from-transparent to-white w-full h-32 z-20">
+        <div class="w-full h-32 bg-no-repeat bg-cover bg-center" style="background-image: url('https://cdn.forevervacation.com/layout_v_3/assets/img/common/pc/brush-stroke.svg');"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-[#fff] py-20 relative">
+
+    <div class="container mx-auto px-6 lg:px-12">
+        <!-- Title and Tagline -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-[#155E95] uppercase tracking-wide">Explore Komodo</h2>
+            <p class="mt-4 text-lg text-gray-600 italic">Full Day Trip to Komodo's Island</p>
+        </div>
+
+        <!-- Content -->
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="relative flex items-center justify-center overflow-hidden rounded-lg shadow-lg bg-cover bg-center h-[450px] lg:h-[500px]" style="background-image: url('taka.jpg');">
+                <!-- Siluet Frame -->
+                <div class="absolute inset-0 border-4 border-[#155E95]"></div>
+            
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+            
+                <!-- Content inside frame -->
+                <div class="relative z-10 text-center text-white px-6 py-4">
+                    <h3 class="text-2xl font-bold">A Journey Like No Other</h3>
+                    <p class="mt-2 text-lg">Discover the mesmerizing beauty of Komodo Island, where adventure meets nature.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center space-y-6">
+                <h3 class="text-3xl font-semibold text-[#155E95]">Your Adventure Awaits</h3>
+                <p class="text-lg text-gray-700">
+                    Komodo Island is a haven for nature lovers and adventure seekers alike. On this full-day trip, you will have the chance to explore the untouched beauty of the island, meet the world-famous Komodo dragons, and immerse yourself in breathtaking landscapes that are a photographer's dream.
+                </p>
+                <p class="text-lg text-gray-700">
+                    From serene beaches to vibrant underwater ecosystems, the experience promises a perfect blend of relaxation and excitement. Join us on this unforgettable trip and explore one of the most unique places on Earth.
+                </p>
+                <a href="#booking" class="self-start inline-block bg-[#155E95] text-white py-3 px-8 rounded-full text-xl font-semibold hover:bg-[#F2D2BD] transition duration-300 mt-6">
+                    Book Your Trip
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destination Section -->
+<section id="destinations" class="py-20 bg-gradient-to-r from-[#DFF2EB] via-[#B9E5E8] to-[#7AB2D3]">
+    <div class="container mx-auto px-6 lg:px-12 text-center">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-[#155E95] uppercase tracking-wide">Our Top Destinations</h2>
+            <p class="mt-4 text-lg text-gray-600 italic">Full Day Trip to Komodo's Island</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Card 1 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination1.jpg" alt="Padar Island" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Padar Island</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            A stunning island known for its panoramic views, perfect for adventure seekers and photographers.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $300</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination2.jpg" alt="Pink Beach" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Pink Beach</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            A rare and exotic beach with pink sand, perfect for relaxation and snorkeling.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $350</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination3.jpg" alt="Taka Makassar" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Taka Makassar</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            A hidden gem surrounded by crystal-clear waters, perfect for a secluded getaway.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $280</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination4.jpg" alt="Komodo Island" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Komodo Island</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            A unique adventure awaits on the island of Komodo, home to the majestic Komodo dragons.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $350</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination5.jpg" alt="Siaba Besar" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Siaba Besar</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Explore the underwater wonders and vibrant marine life of Siaba Besar.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $270</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="relative p-1 bg-gradient-to-br from-[#ffffff55] to-[#ffffff22] rounded-3xl shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:translate-y-2">
+                <div class="relative animate-fade-in">
+                    <img src="destination6.jpg" alt="Manta Point" class="w-full h-64 object-cover rounded-t-3xl">
+                    <div class="p-6 text-left">
+                        <h3 class="text-3xl font-bold text-[#243A73]">Manta Point</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Dive into an unforgettable experience at Manta Point, where you'll encounter manta rays.
+                        </p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-[#1565C0] font-semibold text-xl">From $320</span>
+                            <a href="#" class="inline-block px-6 py-2 bg-gradient-to-r from-[#1565C0] to-[#42A5F5] text-white rounded-full text-sm font-medium shadow-lg hover:opacity-80">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white py-12 shadow-xl">
+    <div class="container mx-auto px-6 lg:px-12 text-center">
+        <!-- Social Media Icons -->
+        <div class="mb-8">
+            <h3 class="text-3xl font-extrabold tracking-wide text-[#155E95] uppercase">Stay Connected</h3>
+            <div class="flex justify-center gap-8 mt-6">
+                <a href="#" class="text-3xl transform transition duration-300 hover:scale-110 hover:text-[#4A628A]">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-3xl transform transition duration-300 hover:scale-110 hover:text-[#4A628A]">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-3xl transform transition duration-300 hover:scale-110 hover:text-[#4A628A]">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-3xl transform transition duration-300 hover:scale-110 hover:text-[#4A628A]">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            <div>
+                <h4 class="font-bold text-lg text-[#243A73] mb-4">Company</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-[#4A628A]">About Us</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Careers</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#243A73] mb-4">Support</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-[#4A628A]">Help Center</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Contact</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#243A73] mb-4">Explore</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-[#4A628A]">Destinations</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Blog</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg text-[#243A73] mb-4">Connect</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-[#4A628A]">Newsletter</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Partners</a></li>
+                    <li><a href="#" class="hover:text-[#4A628A]">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t-2 border-[#4A628A] pt-8">
+            <p class="text-sm text-[#243A73]">
+                &copy; 2025 <span class="font-semibold">Labuan Bajo Tour</span>. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>
+    let images = document.querySelectorAll('.background-slider img');
+    let index = 0;
+
+    setInterval(() => {
+        images[index].classList.remove('active');
+        index = (index + 1) % images.length;
+        images[index].classList.add('active');
+    }, 5000);  // Ubah gambar setiap 5 detik
+</script>
+<script>
+    const logo = document.getElementById('logo');
+    const nav = document.getElementById('navigation');
+    const header = document.getElementById('header');
+    const lDropdown = document.getElementById('language-dropdown');
+    const maxScrollY = 100; // Total tinggi yang bisa di-scroll
+
+    window.addEventListener('scroll', () => {
+        const scrollRatio = Math.min(window.scrollY / maxScrollY, 1); // Proporsi dari 0 hingga 1
+
+        // Update untuk logo: translate-y-14 ke translate-y-0
+        const initialLogoTranslateY = 14; // translate-y-14
+        const newLogoTranslateY = initialLogoTranslateY - (scrollRatio * initialLogoTranslateY); // Perhitungan transformasi
+        logo.style.transform = `translate(0, -${newLogoTranslateY}rem)`; // Posisikan ulang logo
+
+        // Update untuk nav: translate-y-[32em] ke translate-y-0
+        const initialNavTranslateY = 32; // translate-y-[32em]
+        const newNavTranslateY = initialNavTranslateY - (scrollRatio * initialNavTranslateY); // Perhitungan transformasi
+        nav.style.transform = `translate(-50%, ${newNavTranslateY}em)`; // Posisikan ulang nav
+
+        // Update untuk header background
+        if (window.scrollY > 100) {
+            header.classList.add('bg-white'); // Tambahkan latar belakang putih jika sudah di-scroll
+            header.classList.remove('text-white')
+            header.classList.add('text-[#155E95]');; // Ubah teks menjadi hitam jika background putih
+            header.classList.add('shadow-sm')
+        } else {
+            header.classList.remove('bg-white'); // Kembalikan background ke transparan
+            header.classList.add('text-white'); // Kembalikan warna teks ke putih
+            header.classList.remove('text-[#155E95]')
+            header.classList.remove('shadow-sm')
+        }
+    });
+</script>
+
+
+</body>
+</html>
