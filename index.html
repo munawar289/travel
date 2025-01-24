@@ -198,7 +198,7 @@
 </section>
 
 <!-- Destination Section -->
-<section id="destinations" class="py-20 bg-gradient-to-r from-[#DFF2EB] via-[#B9E5E8] to-[#7AB2D3]">
+<section id="destinations" class="pt-20 pb-40 bg-gradient-to-r from-[#DFF2EB] via-[#B9E5E8] to-[#7AB2D3]">
     <div class="container mx-auto px-6 lg:px-12 text-center">
         <div class="text-center mb-12">
             <h2 class="text-4xl font-extrabold text-[#155E95] uppercase tracking-wide">Our Top Destinations</h2>
@@ -323,11 +323,15 @@
     </div>
 </section>
 
-<footer class="bg-white py-12 shadow-xl">
-    <div class="container mx-auto px-6 lg:px-12 text-center">
-        <!-- Social Media Icons -->
+<footer class="absolute w-full bg-white transform -translate-y-10 py-12 shadow-xl rounded-t-[3rem] overflow-hidden">
+    <div class="container mx-auto px-4 lg:px-10">
         <div class="mb-8">
-            <h3 class="text-3xl font-extrabold tracking-wide text-[#155E95] uppercase">Stay Connected</h3>
+            <span class="font-semibold text-2xl text-[#243A73]">Let’s Travel: Your Gateway to the Wonders of Labuan Bajo</span>
+            <br>
+            Discover the stunning wonders of Labuan Bajo with tailor-made tours, from the iconic Komodo Islands to pristine beaches. Adventure awaits—let’s make memories that last a lifetime!
+        </div>
+        <!-- Social Media Icons -->
+        <div class="mb-1">
             <div class="flex justify-center gap-8 mt-6">
                 <a href="#" class="text-3xl transform transition duration-300 hover:scale-110 hover:text-[#4A628A]">
                     <i class="fab fa-facebook-f"></i>
@@ -350,7 +354,6 @@
                 <h4 class="font-bold text-lg text-[#243A73] mb-4">Company</h4>
                 <ul>
                     <li><a href="#" class="hover:text-[#4A628A]">About Us</a></li>
-                    <li><a href="#" class="hover:text-[#4A628A]">Careers</a></li>
                     <li><a href="#" class="hover:text-[#4A628A]">Privacy Policy</a></li>
                     <li><a href="#" class="hover:text-[#4A628A]">Terms of Service</a></li>
                 </ul>
@@ -382,7 +385,7 @@
         </div>
 
         <!-- Footer Bottom -->
-        <div class="border-t-2 border-[#4A628A] pt-8">
+        <div class="pt-8 text-center">
             <p class="text-sm text-[#243A73]">
                 &copy; 2025 <span class="font-semibold">Let's Travel Labuan Bajo</span>. All Rights Reserved.
             </p>
@@ -393,7 +396,7 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <script>
-    let images = document.querySelectorAll('.background-slider img');
+    let images = document.querySelectorAll('.background-slider .bg');
     let index = 0;
 
     setInterval(() => {
